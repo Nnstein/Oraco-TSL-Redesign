@@ -1,11 +1,28 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+let ai: GoogleGenAI | null = null;
+
+const getAiClient = () => {
+  if (!ai) {
+    const apiKey = process.env.API_KEY;
+    if (!apiKey) {
+      console.warn("Gemini API Key is missing. Chat functionality will be disabled.");
+      return null;
+    }
+    ai = new GoogleGenAI({ apiKey });
+  }
+  return ai;
+};
 
 export const generateResponse = async (userMessage: string): Promise<string> => {
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+    const client = getAiClient();
+    if (!client) {
+      return "I'm currently offline. Please contact us via email.";
+    }
+
+    const response = await client.models.generateContent({
+      model: 'gemini-2.0-flash-exp',
       contents: userMessage,
       config: {
         systemInstruction: `You are OracoBot, the friendly and professional AI assistant for Oraco Africa. 

@@ -2,6 +2,7 @@ import React, { useEffect, Suspense, lazy } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import { NAV_ITEMS } from './constants';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages
 const HomePage = lazy(() => import('./pages/Home'));
@@ -28,20 +29,22 @@ const LoadingFallback = () => (
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
-      <ScrollToTop />
-      <Layout navItems={NAV_ITEMS}>
-        <Suspense fallback={<LoadingFallback />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/insights" element={<InsightsPage />} />
-          </Routes>
-        </Suspense>
-      </Layout>
-    </HashRouter>
+    <ErrorBoundary>
+      <HashRouter>
+        <ScrollToTop />
+        <Layout navItems={NAV_ITEMS}>
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/insights" element={<InsightsPage />} />
+            </Routes>
+          </Suspense>
+        </Layout>
+      </HashRouter>
+    </ErrorBoundary>
   );
 };
 
