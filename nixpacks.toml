@@ -1,12 +1,12 @@
 [phases.setup]
-nixPkgs = ["nodejs-18_x", "npm-9_x"]
+nixPkgs = ["nodejs-18_x", "npm-9_x", "nginx"]
 cmds = ["npm install"]
 
 [phases.build]
 cmds = ["npm run build"]
 
 [phases.start]
-cmds = ["node server.js"]
+cmds = ["nginx -c /app/nginx.conf -g 'daemon off;'"]
 
 [variables]
 NPM_CONFIG_PRODUCTION = "false" # Ensure devDependencies are installed for build
