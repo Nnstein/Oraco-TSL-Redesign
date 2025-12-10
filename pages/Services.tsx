@@ -7,9 +7,9 @@ const ServicesPage: React.FC = () => (
     <div className="pb-24 pt-24 md:pt-32">
         <div className="container mx-auto px-6 mb-8 md:mb-24 text-center">
             <ScrollReveal>
-                <span className="text-brand-primary font-bold tracking-widest uppercase text-[10px] md:text-sm mb-2 md:mb-4 block">Professional Services For Businesses</span>
-                <h1 className="text-3xl md:text-7xl font-serif font-bold text-brand-dark dark:text-white mb-4 md:mb-8 transition-colors">Our Capabilities</h1>
-                <p className="text-sm md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto font-light leading-relaxed transition-colors">
+                <span className="text-brand-primary font-bold tracking-widest uppercase text-xs sm:text-sm md:text-base mb-2 md:mb-4 block">Professional Services For Businesses</span>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-dark dark:text-white mb-4 md:mb-8 transition-colors">Our Capabilities</h1>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto font-light leading-relaxed transition-colors">
                     We offer a holistic suite of digital services designed to take your business from concept to market dominance.
                 </p>
             </ScrollReveal>
@@ -19,7 +19,7 @@ const ServicesPage: React.FC = () => (
         <div className="container mx-auto px-6">
             <div className="flex overflow-x-auto gap-4 pb-6 -mx-6 px-6 md:grid md:grid-cols-2 md:gap-12 md:overflow-visible md:pb-0 snap-x snap-mandatory">
                 {SERVICES.map((service, idx) => (
-                    <div key={service.id} className="min-w-[280px] w-[280px] md:w-auto snap-center flex-shrink-0 h-full">
+                    <div key={service.id} className="min-w-[300px] w-[300px] sm:min-w-0 sm:w-auto snap-center flex-shrink-0 h-full">
                         <ScrollReveal delay={idx * 100} className="h-full">
                             <div className="group p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-soft hover:shadow-2xl hover:border-brand-primary/20 dark:hover:border-brand-primary/20 transition-all duration-300 flex flex-col items-start h-full">
                                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-brand-light dark:bg-slate-800 text-brand-primary flex items-center justify-center mb-4 md:mb-8 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">

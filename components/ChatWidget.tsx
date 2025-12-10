@@ -34,7 +34,7 @@ const ChatWidget: React.FC = () => {
     setIsLoading(true);
 
     const botResponse = await generateResponse(userMsg);
-    
+
     setMessages(prev => [...prev, { role: 'bot', text: botResponse }]);
     setIsLoading(false);
   };
@@ -45,9 +45,8 @@ const ChatWidget: React.FC = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full shadow-2xl transition-all duration-500 hover:scale-105 ${
-            isOpen ? 'bg-slate-800 dark:bg-slate-700 rotate-90' : 'bg-brand-primary animate-bounce-subtle'
-          } text-white ring-2 md:ring-4 ring-white/50 dark:ring-slate-800/50`}
+          className={`flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full shadow-2xl transition-all duration-500 hover:scale-105 ${isOpen ? 'bg-slate-800 dark:bg-slate-700 rotate-90' : 'bg-brand-primary animate-bounce-subtle'
+            } text-white ring-2 md:ring-4 ring-white/50 dark:ring-slate-800/50`}
           aria-label="Toggle Support Chat"
         >
           {isOpen ? <X size={20} className="md:w-6 md:h-6" /> : <MessageCircle size={24} className="md:w-8 md:h-8 text-white" fill="currentColor" />}
@@ -56,11 +55,10 @@ const ChatWidget: React.FC = () => {
 
       {/* Chat Window */}
       <div
-        className={`fixed bottom-24 right-4 md:right-8 w-[calc(100%-2rem)] md:w-full max-w-[360px] sm:max-w-[400px] bg-white dark:bg-slate-900 rounded-[2rem] shadow-2xl z-40 flex flex-col transition-all duration-500 origin-bottom-right border border-slate-100 dark:border-slate-800 overflow-hidden ${
-          isOpen 
-            ? 'opacity-100 scale-100 translate-y-0' 
+        className={`fixed bottom-24 right-4 md:right-8 w-[calc(100%-2rem)] md:w-full max-w-[360px] sm:max-w-[400px] bg-white dark:bg-slate-900 rounded-[2rem] shadow-2xl z-40 flex flex-col transition-all duration-500 origin-bottom-right border border-slate-100 dark:border-slate-800 overflow-hidden ${isOpen
+            ? 'opacity-100 scale-100 translate-y-0'
             : 'opacity-0 scale-90 translate-y-10 pointer-events-none'
-        }`}
+          }`}
         style={{ height: '500px', maxHeight: 'calc(100vh - 150px)' }}
       >
         {/* Header */}
@@ -82,11 +80,10 @@ const ChatWidget: React.FC = () => {
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[85%] rounded-2xl px-5 py-3.5 text-sm leading-relaxed shadow-sm ${
-                  msg.role === 'user'
+                className={`max-w-[85%] rounded-2xl px-5 py-3.5 text-sm leading-relaxed shadow-sm ${msg.role === 'user'
                     ? 'bg-brand-primary text-white rounded-tr-none'
                     : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700 rounded-tl-none'
-                }`}
+                  }`}
               >
                 {msg.text}
               </div>
@@ -117,6 +114,7 @@ const ChatWidget: React.FC = () => {
               type="submit"
               disabled={isLoading || !input.trim()}
               className="absolute right-3 p-2 text-white bg-brand-primary rounded-lg hover:bg-brand-secondary disabled:bg-slate-200 dark:disabled:bg-slate-700 disabled:cursor-not-allowed transition-colors shadow-md"
+              aria-label="Send message"
             >
               <Send size={16} />
             </button>

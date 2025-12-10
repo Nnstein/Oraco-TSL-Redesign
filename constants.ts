@@ -10,32 +10,32 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const UNIVERSITIES: Partner[] = [
-  { id: 'ui', name: 'University of Ibadan', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/89/University_of_Ibadan_logo.png/200px-University_of_Ibadan_logo.png' },
-  { id: 'unilag', name: 'University of Lagos', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/University_of_Lagos_logo.png/200px-University_of_Lagos_logo.png' },
-  { id: 'covenant', name: 'Covenant University', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Covenant_University_logo.png/200px-Covenant_University_logo.png' },
-  { id: 'unn', name: 'University of Nigeria, Nsukka', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/University_of_Nigeria_Nsukka_Logo.png/200px-University_of_Nigeria_Nsukka_Logo.png' },
-  { id: 'abu', name: 'Ahmadu Bello University', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ahmadu_Bello_University_logo.png/200px-Ahmadu_Bello_University_logo.png' },
-  { id: 'buk', name: 'Bayero University Kano', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Bayero_University_Kano_logo.png/200px-Bayero_University_Kano_logo.png' },
-  { id: 'futa', name: 'FUTA', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Futa_logo.png' },
+  { id: 'ui', name: 'University of Ibadan', logo: '/logos/university of ibadan logo png.png' },
+  { id: 'unilag', name: 'University of Lagos', logo: '/logos/University of Lagos.png' },
+  { id: 'covenant', name: 'Covenant University', logo: '/logos/Covenant University.png' },
+  { id: 'unn', name: 'University of Nigeria, Nsukka', logo: '/logos/University of Nigeria, Nsukka.png' },
+  { id: 'abu', name: 'Ahmadu Bello University', logo: '/logos/Ahmadu Bello University.png' },
+  { id: 'buk', name: 'Bayero University Kano', logo: '/logos/Bayero University Kano.jpg' },
+  { id: 'futa', name: 'FUTA', logo: '/logos/FUTA (Federal University of Technology, Akure).jpeg' },
 ];
 
 export const SCHOOLS: Partner[] = [
-  { id: 'loyola', name: 'Loyola Jesuit College', logo: 'https://ui-avatars.com/api/?name=Loyola+Jesuit&background=0d9488&color=fff&size=128&bold=true' },
-  { id: 'grange', name: 'Grange School', logo: 'https://ui-avatars.com/api/?name=Grange+School&background=115e59&color=fff&size=128&bold=true' },
-  { id: 'daywaterman', name: 'Day Waterman College', logo: 'https://ui-avatars.com/api/?name=Day+Waterman&background=0f172a&color=fff&size=128&bold=true' },
-  { id: 'ambassadors', name: 'The Ambassadors College', logo: 'https://ui-avatars.com/api/?name=Ambassadors+College&background=0d9488&color=fff&size=128&bold=true' },
-  { id: 'atlantic', name: 'Atlantic Hall', logo: 'https://ui-avatars.com/api/?name=Atlantic+Hall&background=115e59&color=fff&size=128&bold=true' },
-  { id: 'chrisland', name: 'Chrisland High School', logo: 'https://ui-avatars.com/api/?name=Chrisland&background=0f172a&color=fff&size=128&bold=true' },
-  { id: 'greensprings', name: 'Greensprings School', logo: 'https://ui-avatars.com/api/?name=Greensprings&background=0d9488&color=fff&size=128&bold=true' },
-  { id: 'corona', name: 'Corona Secondary School', logo: 'https://ui-avatars.com/api/?name=Corona&background=115e59&color=fff&size=128&bold=true' },
+  { id: 'loyola', name: 'Loyola Jesuit College', logo: '/logos/Loyola Jesuit College.png' },
+  { id: 'grange', name: 'Grange School', logo: '/logos/Grange School.jpeg' },
+  { id: 'daywaterman', name: 'Day Waterman College', logo: '/logos/Day Waterman College.png' },
+  { id: 'ambassadors', name: 'The Ambassadors College', logo: '/logos/The Ambassadors College.jpeg' },
+  { id: 'atlantic', name: 'Atlantic Hall', logo: '/logos/Atlantic Hall.jpeg' },
+  { id: 'chrisland', name: 'Chrisland High School', logo: '/logos/Chrisland High School.jpeg' },
+  { id: 'greensprings', name: 'Greensprings School', logo: '/logos/Greensprings School.png' },
+  { id: 'corona', name: 'Corona Secondary School', logo: '/logos/Corona Secondary School.png' },
 ];
 
 export const RESEARCH_INSTITUTIONS: Partner[] = [
-  { id: 'iita', name: 'IITA', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/CGIAR_System_Organization_logo.svg/1200px-CGIAR_System_Organization_logo.svg.png' },
-  { id: 'uch', name: 'UCH Ibadan', logo: 'https://ui-avatars.com/api/?name=UCH+Ibadan&background=0f172a&color=fff&size=128&bold=true' },
-  { id: 'nitr', name: 'NITR', logo: 'https://ui-avatars.com/api/?name=NITR&background=0d9488&color=fff&size=128&bold=true' },
-  { id: 'niomr', name: 'NIOMR', logo: 'https://ui-avatars.com/api/?name=NIOMR&background=115e59&color=fff&size=128&bold=true' },
-  { id: 'niprd', name: 'NIPRD', logo: 'https://ui-avatars.com/api/?name=NIPRD&background=0f172a&color=fff&size=128&bold=true' },
+  { id: 'iita', name: 'IITA', logo: '/logos/IITA (International Institute of Tropical Agriculture).jpg' },
+  { id: 'uch', name: 'UCH Ibadan', logo: '/logos/UCH Ibadan (University College Hospital).jpeg' },
+  { id: 'nitr', name: 'NITR', logo: '/logos/NITR (Nigerian Institute of Trypanosomiasis Research).png' },
+  { id: 'niomr', name: 'NIOMR', logo: '/logos/NIOMR (Nigerian Institute for Oceanography and Marine Research).png' },
+  { id: 'niprd', name: 'NIPRD', logo: '/logos/NIPRD (National Institute for Pharmaceutical Research and Development).png' },
 ];
 
 export const PARTNERS: Partner[] = [
@@ -48,7 +48,7 @@ export const PARTNERS: Partner[] = [
   {
     id: 'gradescope',
     name: 'Gradescope',
-    logo: 'https://www.gradescope.com/assets/gradescope_logo_color-03be81a8b329402280d0d6118d533116.svg', 
+    logo: 'https://www.gradescope.com/assets/gradescope_logo_color-03be81a8b329402280d0d6118d533116.svg',
   }
 ];
 

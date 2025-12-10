@@ -6,9 +6,9 @@ const InsightsPage: React.FC = () => (
         <div className="container mx-auto px-6">
             <div className="text-center mb-12 md:mb-16">
                 <ScrollReveal>
-                    <span className="text-brand-primary font-bold tracking-widest uppercase text-[10px] md:text-sm mb-2 md:mb-4 block">Latest News</span>
-                    <h1 className="text-3xl md:text-7xl font-serif font-bold text-brand-dark dark:text-white mb-4 md:mb-8 transition-colors">Insights</h1>
-                    <p className="text-sm md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto transition-colors">Staying ahead of the curve with thoughts on academic integrity, digital transformation, and more.</p>
+                    <span className="text-brand-primary font-bold tracking-widest uppercase text-xs sm:text-sm md:text-base mb-2 md:mb-4 block">Latest News</span>
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-dark dark:text-white mb-4 md:mb-8 transition-colors">Insights</h1>
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto transition-colors">Staying ahead of the curve with thoughts on academic integrity, digital transformation, and more.</p>
                 </ScrollReveal>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -22,7 +22,7 @@ const InsightsPage: React.FC = () => (
                     <ScrollReveal key={idx} delay={idx * 150} className="h-full">
                         <div className="group cursor-pointer h-full flex flex-col">
                             <div className="h-48 md:h-64 bg-slate-100 dark:bg-slate-800 rounded-2xl mb-4 md:mb-6 overflow-hidden relative">
-                                <img src={`https://picsum.photos/600/400?random=${idx + 10}`} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" />
+                                <img src={`https://picsum.photos/600/400?random=${idx + 10}`} alt={post.title} width="600" height="400" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" />
                                 <div className="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-brand-dark dark:text-white">
                                     {post.category}
                                 </div>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://oosokws4gk4sksc88w08sogk.34.18.27.61.sslip.io/sitemap.xml
